@@ -1,0 +1,7 @@
+https://dwm.suckless.org/patches/namedscratchpads/"
+https://dwm.suckless.org/patches/scratchpad/"
+https://dwm.suckless.org/patches/scratchpads/"
+https://dwm.suckless.org/patches/statuscmd/"
+https://bbs.archlinux.org/viewtopic.php?id=216772"
+https://www.reddit.com/r/suckless/comments/gu6kkn/dwms_handling_of_moving_windows_between_tags_on/"
+https://dwm.suckless.org/patches/systray/"
