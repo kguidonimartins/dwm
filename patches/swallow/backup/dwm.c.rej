@@ -1,0 +1,31 @@
+--- dwm.c
++++ dwm.c
+@@ -98,9 +104,11 @@ struct Client {
+ 	int basew, baseh, incw, inch, maxw, maxh, minw, minh;
+ 	int bw, oldbw;
+ 	unsigned int tags;
+-	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;
++	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
++	pid_t pid;
+ 	Client *next;
+ 	Client *snext;
++	Client *swallowing;
+ 	Monitor *mon;
+ 	Window win;
+ };
+@@ -1868,9 +1956,12 @@ unmanage(Client *c, int destroyed)
+ 		XUngrabServer(dpy);
+ 	}
+ 	free(c);
+-	focus(NULL);
+-	updateclientlist();
+-	arrange(m);
++
++	if (!s) {
++		arrange(m);
++		focus(NULL);
++		updateclientlist();
++	}
+ }
+ 
+ void
