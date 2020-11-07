@@ -50,6 +50,7 @@ uninstall:
 
 .PHONY: all options clean dist install uninstall
 
-copy: cp config.def.h config.h
+copy: 
+	cp config.def.h config.h
 
 apply-change: copy clean install
