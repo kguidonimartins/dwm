@@ -1,0 +1,27 @@
+
+single tagset
+Description
+This patch addresses the multi-monitor setup. Instead of having separate tags
+for every monitor there is just one list of tags for all monitors. Instead of
+moving windows from one monitor to the other, the desired tag from the other
+monitor can just be selected and all windows will be drawn on the current
+monitor.
+Several deep changes needed to be made:
+
+Macro ISVISIBLE expects a second parameter, the monitor
+Monitor->clients and Monitor->stack were moved to the global variable
+Clientlist cl. All monitors refer to this one list.
+A new method attachclients was added. When changing between tags this
+function ensures that all clients are pointing to the right monitor.
+
+
+Download
+
+dwm-single_tagset-20160731-56a31dc.diff
+dwm-6.1-single_tagset.diff (16634b) (20140209)
+dwm-single_tagset-6.0.diff (14417b) (20120406)
+
+Authors
+
+Jan Christoph Ebersbach - jceb@e-jc.de
+
