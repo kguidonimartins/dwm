@@ -57,7 +57,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     switchtotag    isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,             0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 3,       0,             0,           -1 },
 	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spcalc",		NULL,		SPTAG(1),		1,			 -1 },
 };
@@ -114,7 +114,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_minus,			spawn,			SHCMD("pulsemixer --change-volume -15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,				XK_equal,			spawn,			SHCMD("pulsemixer --change-volume +5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_equal,			spawn,			SHCMD("pulsemixer --change-volume +15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			    XK_BackSpace,			togglescratch,	{.ui = 0} },
+	{ MODKEY,			    XK_BackSpace,		togglescratch,	{.ui = 0} },
 	{ MODKEY|ShiftMask,		XK_BackSpace,		spawn,			SHCMD("sysact") },
 
 	{ MODKEY,				XK_Tab,				view,			{0} },
@@ -201,6 +201,7 @@ static Key keys[] = {
 	{ MODKEY,				XK_F10,				spawn,			SHCMD("dmenuumount") },
 	{ MODKEY,				XK_F11,				spawn,			SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
 	/* { MODKEY,				XK_F12,				xrdb,			{.v = NULL } }, */
+	{ 0,					XK_F12,				togglescratch,	{.ui = 0} },
 	{ MODKEY,				XK_space,			zoom,			{0} },
 	/* { MODKEY|ShiftMask,	XK_space,			togglefloating,	{0} }, */
 
@@ -270,7 +271,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button4,        sigdwmblocks,   {.i = 4} },
 	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
 	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
-	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.config/suckless/dwmblocks/blocks.h") },
+	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.config/suckless/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },
