@@ -39,7 +39,7 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", "-e", "scrax", NULL };
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -87,7 +87,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-l", "10", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 /* commands spawned when clicking statusbar, the mouse button pressed is exported as BUTTON */
@@ -114,7 +114,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_minus,			spawn,			SHCMD("pulsemixer --change-volume -15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,				XK_equal,			spawn,			SHCMD("pulsemixer --change-volume +5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_equal,			spawn,			SHCMD("pulsemixer --change-volume +15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,				XK_BackSpace,		spawn,			SHCMD("sysact") },
+	{ MODKEY,			    XK_BackSpace,			togglescratch,	{.ui = 0} },
 	{ MODKEY|ShiftMask,		XK_BackSpace,		spawn,			SHCMD("sysact") },
 
 	{ MODKEY,				XK_Tab,				view,			{0} },
@@ -148,8 +148,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_a,				defaultgaps,	{0} },
 	/* { MODKEY,				XK_s,				togglesticky,	{0} }, */
 	{ MODKEY,				XK_d,				spawn,          {.v = dmenucmd } },
-	/* { MODKEY,				XK_f,				togglefullscr,	{0} }, */
-	{ MODKEY|ShiftMask,		XK_f,				setlayout,		{.v = &layouts[8]} },
+	{ MODKEY,				XK_f,				togglefullscr,	{0} },
+	/* { MODKEY|ShiftMask,		XK_f,				setlayout,		{.v = &layouts[8]} }, */
 	{ MODKEY,				XK_g,				shiftview,		{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_g,				shifttag,		{ .i = -1 } },
 	{ MODKEY,				XK_h,				focusmon,		{.i = -1 } },
@@ -162,9 +162,9 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,	XK_l,				setmfact,      	{.f = +0.05} },
 	{ MODKEY,				XK_semicolon,		shiftview,		{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_semicolon,		shifttag,		{ .i = 1 } },
-	{ MODKEY,			    XK_apostrophe,		togglescratch,	{.ui = 1} },
+	/* { MODKEY,			    XK_apostrophe,		togglescratch,	{.ui = 1} }, */
 	{ MODKEY,				XK_Return,			spawn,			{.v = termcmd } },
-	{ MODKEY|ShiftMask,	    XK_Return,			togglescratch,	{.ui = 0} },
+	/* { MODKEY|ShiftMask,	    XK_Return,			togglescratch,	{.ui = 0} }, */
 
 	/* { MODKEY,			XK_z,				incrgaps,		{.i = +3 } }, */
 	/* { MODKEY,			XK_x,				incrgaps,		{.i = -3 } }, */
