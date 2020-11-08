@@ -54,10 +54,23 @@ static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
-	 */
+	 */ 
+	/* 1 == 1 << 8 */
+	/* 2 == 1 << 1 */
+	/* 3 == 1 << 2 */
+	/* 4 == 1 << 3 */
+	/* 5 == 1 << 4 */
+	/* 6 == 1 << 5 */
+	/* 7 == 1 << 6 */
+	/* 8 == 1 << 7 */
+	/* 9 == 1 << 0 */
 	/* class      instance    title       tags mask     switchtotag    isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 3,       0,             0,           -1 },
+	{ "Nautilus",  NULL,       NULL,       1 << 1,       0,             0,           -1 },
+	{ "Brave",  NULL,       NULL,       1 << 2,       0,             0,           -1 },
+	{ "RStudio",  NULL,       NULL,       1 << 3,       0,             0,           -1 },
+	{ "Code",  NULL,       NULL,       1 << 5,       0,             0,           -1 },
+	{ "Zotero",  NULL,       NULL,       1 << 6,       0,             0,           -1 },
 	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spcalc",		NULL,		SPTAG(1),		1,			 -1 },
 };
@@ -132,8 +145,8 @@ static Key keys[] = {
 	{ MODKEY,				XK_t,				setlayout,		{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,				setlayout,		{.v = &layouts[1]} }, /* floating */
 	{ MODKEY,				XK_y,				setlayout,		{.v = &layouts[2]} }, /* monocle */
-	{ MODKEY|ShiftMask,	XK_y,				setlayout,		{.v = &layouts[3]} }, /* dwindle */
-	{ MODKEY,			XK_u,				setlayout,		{.v = &layouts[4]} }, /* deck */
+	{ MODKEY|ShiftMask,		XK_y,				setlayout,		{.v = &layouts[3]} }, /* dwindle */
+	{ MODKEY,				XK_u,				setlayout,		{.v = &layouts[4]} }, /* deck */
 	/* { MODKEY|ShiftMask,	XK_u,				setlayout,		{.v = &layouts[5]} }, /1* monocle *1/ */
 	/* { MODKEY,			XK_i,				setlayout,		{.v = &layouts[6]} }, /1* centeredmaster *1/ */
 	/* { MODKEY|ShiftMask,	XK_i,				setlayout,		{.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
