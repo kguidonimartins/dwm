@@ -175,7 +175,7 @@ static Button buttons[] = {
     { ClkStatusText,        0,              Button4,        sigdwmblocks,   {.i = 4} },
     { ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
     { ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
-    { ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.config/suckless/dwmblocks/config.h") },
+    { ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.local/suckless/dwmblocks/config.h") },
     { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
     { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
     { ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },

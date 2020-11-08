@@ -26,8 +26,8 @@ static const char *fonts[]          = {
 static char dmenufont[]             = "UbuntuMono Nerd Font:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray3[]       = "#FF5555";
+static const char col_gray4[]       = "#F8F8F2";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
@@ -71,7 +71,7 @@ static const Rule rules[] = {
 	{ "RStudio",  NULL,       NULL,       1 << 3,       0,           0,         0,        -1 },
 	{ "Code",     NULL,       NULL,       1 << 5,       0,           0,         0,        -1 },
 	{ "Zotero",   NULL,       NULL,       1 << 6,       0,           0,         0,        -1 },
-	{ NULL,      "spterm",    NULL,       SPTAG(0),     1,           1,         0,        -1 },
+	{ NULL,      "spterm",    NULL,       SPTAG(0),     1,           1,         0,         1 },
 	{ NULL,      "spcalc",    NULL,       SPTAG(1),     1,           1,         0,        -1 },
 
 };
