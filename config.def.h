@@ -51,28 +51,29 @@ static Sp scratchpads[] = {
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */ 
-	/* 1 == 1 << 8 */
-	/* 2 == 1 << 1 */
-	/* 3 == 1 << 2 */
-	/* 4 == 1 << 3 */
-	/* 5 == 1 << 4 */
-	/* 6 == 1 << 5 */
-	/* 7 == 1 << 6 */
-	/* 8 == 1 << 7 */
-	/* 9 == 1 << 0 */
-	/* class      instance    title       tags mask     switchtotag    isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
-	{ "Nautilus", NULL,       NULL,       1 << 1,       0,             0,           -1 },
-	{ "Brave",	  NULL,       NULL,       1 << 2,       0,             0,           -1 },
-	{ "RStudio",  NULL,       NULL,       1 << 3,       0,             0,           -1 },
-	{ "Code",     NULL,       NULL,       1 << 5,       0,             0,           -1 },
-	{ "Zotero",   NULL,       NULL,       1 << 6,       0,             0,           -1 },
-	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
-	{ NULL,		  "spcalc",		NULL,		SPTAG(1),		1,			 -1 },
+    /* xprop(1):
+     *  WM_CLASS(STRING) = instance, class
+     *  WM_NAME(STRING) = title
+     */
+    /* 1 == 1 << 8 */
+    /* 2 == 1 << 1 */
+    /* 3 == 1 << 2 */
+    /* 4 == 1 << 3 */
+    /* 5 == 1 << 4 */
+    /* 6 == 1 << 5 */
+    /* 7 == 1 << 6 */
+    /* 8 == 1 << 7 */
+    /* 9 == 1 << 0 */
+    /* class      instance    title       tags mask     switchtotag    isfloating   monitor     scratch key*/
+    { "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
+    { "Nautilus", NULL,       NULL,       1 << 1,       0,             0,           -1 },
+    { "Brave",    NULL,       NULL,       1 << 2,       0,             0,           -1 },
+    { "RStudio",  NULL,       NULL,       1 << 3,       0,             0,           -1 },
+    { "Code",     NULL,       NULL,       1 << 5,       0,             0,           -1 },
+    { "Zotero",   NULL,       NULL,       1 << 6,       0,             0,           -1 },
+    { NULL,       "spterm",   NULL,       SPTAG(0),                    1,           -1 },
+    { NULL,       "spcalc",   NULL,       SPTAG(1),     1,             1,           -1 },
+
 };
 
 /* layout(s) */
