@@ -74,7 +74,6 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 	{ "HHH",      grid },
-	{ "DD",       doubledeck },
 };
 
 /* key definitions */
@@ -133,7 +132,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_t,				setlayout,		{.v = &layouts[1]} }, /* floating */
 	{ MODKEY,				XK_y,				setlayout,		{.v = &layouts[2]} }, /* monocle */
 	{ MODKEY|ShiftMask,	XK_y,				setlayout,		{.v = &layouts[3]} }, /* dwindle */
-	{ MODKEY,			XK_u,				setlayout,		{.v = &layouts[4]} }, /* deck */
+	/* { MODKEY,			XK_u,				setlayout,		{.v = &layouts[4]} }, /1* deck *1/ */
 	/* { MODKEY|ShiftMask,	XK_u,				setlayout,		{.v = &layouts[5]} }, /1* monocle *1/ */
 	/* { MODKEY,			XK_i,				setlayout,		{.v = &layouts[6]} }, /1* centeredmaster *1/ */
 	/* { MODKEY|ShiftMask,	XK_i,				setlayout,		{.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
