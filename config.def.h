@@ -39,12 +39,12 @@ typedef struct {
     const char *name;
     const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", "-e", "scrax", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 static Sp scratchpads[] = {
-    /* name          cmd  */
-    {"spterm",      spcmd1},
-    {"spranger",    spcmd2},
+	/* name          cmd  */
+	{"spterm",      spcmd1},
+	{"spranger",    spcmd2},
 };
 
 /* tagging */
@@ -64,15 +64,15 @@ static const Rule rules[] = {
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
     /* 9 == 1 << 0 */
-    /* class      instance    title       tags mask     switchtotag    isfloating   monitor     scratch key*/
-    { "Gimp",     NULL,       NULL,       0,            0,             1,           -1 },
-    { "Nautilus", NULL,       NULL,       1 << 1,       0,             0,           -1 },
-    { "Brave",    NULL,       NULL,       1 << 2,       0,             0,           -1 },
-    { "RStudio",  NULL,       NULL,       1 << 3,       0,             0,           -1 },
-    { "Code",     NULL,       NULL,       1 << 5,       0,             0,           -1 },
-    { "Zotero",   NULL,       NULL,       1 << 6,       0,             0,           -1 },
-    { NULL,       "spterm",   NULL,       SPTAG(0),                    1,           -1 },
-    { NULL,       "spcalc",   NULL,       SPTAG(1),     1,             1,           -1 },
+	/* class    instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Gimp",     NULL,       NULL,       1 << 8,       0,           0,         0,        -1 },
+	{ "Nautilus", NULL,       NULL,       1 << 1,       0,           0,         0,        -1 },
+	{ "Brave",    NULL,       NULL,       1 << 2,       0,           0,         0,        -1 },
+	{ "RStudio",  NULL,       NULL,       1 << 3,       0,           0,         0,        -1 },
+	{ "Code",     NULL,       NULL,       1 << 5,       0,           0,         0,        -1 },
+	{ "Zotero",   NULL,       NULL,       1 << 6,       0,           0,         0,        -1 },
+	{ NULL,      "spterm",    NULL,       SPTAG(0),     1,           1,         0,        -1 },
+	{ NULL,      "spcalc",    NULL,       SPTAG(1),     1,           1,         0,        -1 },
 
 };
 
