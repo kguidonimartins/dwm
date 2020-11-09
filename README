@@ -41,6 +41,18 @@ like this in your .xinitrc:
     done &
     exec dwm
 
+When using dwmblocks, you can include in your .xinitrc (allowing you to kill
+dwm after recompiling and restart dwmblocks):
+
+    while true; do
+        dwmblocks
+        sleep 2
+    done &
+
+    while true; do
+        dwm 2> ~/.local/share/dwm/dwm.log
+    done
+
 
 Configuration
 -------------
