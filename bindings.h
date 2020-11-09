@@ -16,7 +16,6 @@ static Key keys[] = {
     { MODKEY,               XK_minus,           spawn,          SHCMD("pulsemixer --change-volume -5; kill -44 $(pidof dwmblocks)") },
     { MODKEY|ShiftMask,     XK_minus,           spawn,          SHCMD("pulsemixer --change-volume -15; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_equal,           spawn,          SHCMD("pulsemixer --change-volume +5; kill -44 $(pidof dwmblocks)") },
-
     { MODKEY|ShiftMask,     XK_equal,           spawn,          SHCMD("pulsemixer --change-volume +15; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_BackSpace,       togglescratch,  {.ui = 0} },
     { MODKEY|ShiftMask,     XK_BackSpace,       spawn,          SHCMD("sysact") },
@@ -50,11 +49,11 @@ static Key keys[] = {
 
     { MODKEY,               XK_a,               togglegaps,     {0} },
     { MODKEY|ShiftMask,     XK_a,               defaultgaps,    {0} },
-    /* { MODKEY,                XK_s,               togglesticky,   {0} }, */
+    { MODKEY,                XK_s,               togglesticky,   {0} },
     { MODKEY,               XK_d,               spawn,          {.v = dmenucmd } },
     { MODKEY,               XK_f,               togglefullscr,  {0} },
     /* { MODKEY|ShiftMask,      XK_f,               setlayout,      {.v = &layouts[8]} }, */
-    { MODKEY,               XK_g,               shiftview,      { .i = -1 } },
+    /* { MODKEY,               XK_g,               shiftview,      { .i = -1 } }, */
     { MODKEY|ShiftMask,     XK_g,               shifttag,       { .i = -1 } },
     { MODKEY,               XK_h,               focusmon,       {.i = -1 } },
     { MODKEY|ShiftMask,     XK_h,               tagmon,         {.i = -1 } },
@@ -64,14 +63,14 @@ static Key keys[] = {
     { MODKEY,               XK_l,               focusmon,       {.i = +1 } },
     { MODKEY|ShiftMask,     XK_l,               tagmon,         {.i = +1 } },
     { MODKEY|ControlMask,   XK_l,               setmfact,       {.f = +0.05} },
-    { MODKEY,               XK_semicolon,       shiftview,      { .i = 1 } },
+    /* { MODKEY,               XK_semicolon,       shiftview,      { .i = 1 } }, */
     { MODKEY|ShiftMask,     XK_semicolon,       shifttag,       { .i = 1 } },
-    /* { MODKEY,                XK_apostrophe,      togglescratch,  {.ui = 1} }, */
+    { MODKEY,               XK_apostrophe,      togglescratch,  {.ui = 1} },
     { MODKEY,               XK_Return,          spawn,          {.v = termcmd } },
     /* { MODKEY|ShiftMask,      XK_Return,          togglescratch,  {.ui = 0} }, */
 
-    /* { MODKEY,            XK_z,               incrgaps,       {.i = +3 } }, */
-    /* { MODKEY,            XK_x,               incrgaps,       {.i = -3 } }, */
+    { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
+    { MODKEY,               XK_x,               incrgaps,       {.i = -3 } },
     { MODKEY,               XK_b,               togglebar,      {0} },
     { MODKEY,               XK_n,               shiftview,      { .i = +1 } },  
     { MODKEY|ShiftMask,     XK_n,               spawn,          SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
@@ -87,9 +86,9 @@ static Key keys[] = {
     { MODKEY,               XK_Right,           focusmon,       {.i = +1 } },
     { MODKEY|ShiftMask,     XK_Right,           tagmon,         {.i = +1 } },
 
-    { MODKEY,               XK_Page_Up,         shiftview,      { .i = -1 } },
+    /* { MODKEY,               XK_Page_Up,         shiftview,      { .i = -1 } }, */
     { MODKEY|ShiftMask,     XK_Page_Up,         shifttag,       { .i = -1 } },
-    { MODKEY,               XK_Page_Down,       shiftview,      { .i = +1 } },
+    /* { MODKEY,               XK_Page_Down,       shiftview,      { .i = +1 } }, */
     { MODKEY|ShiftMask,     XK_Page_Down,       shifttag,       { .i = +1 } },
     { MODKEY,               XK_Insert,          spawn,          SHCMD("xdotool type $(cat ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
@@ -100,14 +99,14 @@ static Key keys[] = {
     /* { MODKEY,                XK_F5,              xrdb,           {.v = NULL } }, */
     { MODKEY,               XK_F6,              togglesystray,  {0} },
     { MODKEY,               XK_F7,              spawn,          SHCMD("td-toggle") },
-    { MODKEY,               XK_F8,              spawn,          SHCMD("mw -Y") },
+    { MODKEY,               XK_F8,              spawn,          SHCMD("mailsync; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_F9,              spawn,          SHCMD("dmenumount") },
     { MODKEY,               XK_F10,             spawn,          SHCMD("dmenuumount") },
     { MODKEY,               XK_F11,             spawn,          SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
     /* { MODKEY,                XK_F12,             xrdb,           {.v = NULL } }, */
     { 0,                    XK_F12,             togglescratch,  {.ui = 0} },
     { MODKEY,               XK_space,           zoom,           {0} },
-    /* { MODKEY|ShiftMask,  XK_space,           togglefloating, {0} }, */
+    { MODKEY|ShiftMask,     XK_space,           togglefloating, {0} },
 
     { 0,                    XK_Print,           spawn,          SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
     { ShiftMask,            XK_Print,           spawn,          SHCMD("maimpick") },
