@@ -64,16 +64,16 @@ static const Rule rules[] = {
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
     /* 9 == 1 << 0 */
-	/* class    instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
-	/* { "Gimp",     NULL,       NULL,       1 << 8,       0,           0,         0,        -1 }, */
-	{ "Nautilus", NULL,       NULL,       1 << 1,       0,           0,         0,        -1 },
-	/* { "Brave",    NULL,       NULL,       1 << 2,       0,           0,         0,        -1 }, */
-	/* { "RStudio",  NULL,       NULL,       1 << 3,       0,           0,         0,        -1 }, */
-	/* { "Code",     NULL,       NULL,       1 << 5,       0,           0,         0,        -1 }, */
-	/* { "Zotero",   NULL,       NULL,       1 << 6,       0,           0,         0,        -1 }, */
-	{ "R_x11",   NULL,       NULL,        1,               1,           0,         0,        -1 },
-	{ NULL,      "spterm",    NULL,       SPTAG(0),     1,           1,         0,         1 },
-	/* { NULL,      "spcalc",    NULL,       SPTAG(1),     1,           1,         0,        -1 }, */
+	/* class       instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Nautilus",  NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
+	{ "R_x11",     NULL,         NULL,       NULL,         1,           0,         0,         -1 },
+	{ "Todoist",   NULL,         NULL,       NULL,         1,           0,         0,         -1 },
+	{ NULL,        "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+	{ "Brave",     NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+	{ "RStudio",   NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
+	{ "Code",      NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
+	{ "Zotero",    NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+	{ NULL,        "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
 };
 
