@@ -39,12 +39,14 @@ typedef struct {
     const char *name;
     const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", "-e", "scrax", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "sptmux", "-g", "120x34", "-e", "scrax", NULL };
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
-	{"spterm",      spcmd1},
+	{"sptmux",      spcmd1},
 	{"spranger",    spcmd2},
+	{"spterm",      spcmd3},
 };
 
 /* tagging */
@@ -68,6 +70,7 @@ static const Rule rules[] = {
 	{ "Nautilus",  NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
 	{ "R_x11",     NULL,         NULL,       NULL,         1,           0,         0,         -1 },
 	{ "Todoist",   NULL,         NULL,       NULL,         1,           0,         0,         -1 },
+	{ NULL,        "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ NULL,        "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ "Brave",     NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
 	{ "RStudio",   NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
