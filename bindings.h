@@ -72,6 +72,7 @@ static Key keys[] = {
     { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
     { MODKEY,               XK_x,               incrgaps,       {.i = -3 } },
     { MODKEY,               XK_b,               togglebar,      {0} },
+    { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_n,               shiftview,      { .i = +1 } },  
     { MODKEY|ShiftMask,     XK_n,               spawn,          SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
     { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e ncmpcpp --screen playlist; kill -44 $(pidof dwmblocks)") },
