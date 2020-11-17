@@ -23,7 +23,7 @@ static const char *fonts[]          = {
                                         "UbuntuMono Nerd Font:size=10:antialias=true:autohint=12",
                                         "Font Awesome 5:size=8:antialias=true:autohint=true"
                                       };
-static char dmenufont[]             = "UbuntuMono Nerd Font:size=10";
+static char dmenufont[]             = "UbuntuMono Nerd Font:size=8:antialias=true:autohint=8";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
