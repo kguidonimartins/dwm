@@ -19,8 +19,8 @@ options:
 
 ${OBJ}: config.h config.mk
 
-config.h:
-	cp config.def.h $@
+config.h: config.def.h
+	cp $< $@
 
 dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
@@ -49,8 +49,3 @@ uninstall:
 		${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 .PHONY: all options clean dist install uninstall
-
-copy: 
-	cp config.def.h config.h
-
-apply-change: copy clean install
