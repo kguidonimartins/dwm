@@ -154,7 +154,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_y,               setlayout,      {.v = &layouts[3]} }, /* dwindle */
     { MODKEY,               XK_u,               setlayout,      {.v = &layouts[4]} }, /* deck */
     /* { MODKEY|ShiftMask,  XK_u,               setlayout,      {.v = &layouts[5]} }, /1* monocle *1/ */
-    /* { MODKEY,            XK_i,               setlayout,      {.v = &layouts[6]} }, /1* centeredmaster *1/ */
+    { MODKEY,               XK_i,               spawn,          SHCMD("dmenubookmarks") }, /* centeredmaster */
     /* { MODKEY|ShiftMask,  XK_i,               setlayout,      {.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
     { MODKEY,               XK_o,               incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,     XK_o,               incnmaster,     {.i = -1 } },
@@ -172,7 +172,7 @@ static Key keys[] = {
     { MODKEY,               XK_d,               spawn,          {.v = dmenucmd } },
     { MODKEY,               XK_f,               togglefullscr,  {0} },
     /* { MODKEY|ShiftMask,      XK_f,               setlayout,      {.v = &layouts[8]} }, */
-    /* { MODKEY,               XK_g,               shiftview,      { .i = -1 } }, */
+    { MODKEY,               XK_g,               spawn,          SHCMD("dmenuwwwquery") },
     { MODKEY|ShiftMask,     XK_g,               shifttag,       { .i = -1 } },
     { MODKEY,               XK_h,               focusmon,       {.i = -1 } },
     { MODKEY|ShiftMask,     XK_h,               tagmon,         {.i = -1 } },
