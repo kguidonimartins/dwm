@@ -142,6 +142,7 @@ static Key keys[] = {
     { MODKEY,               XK_Tab,             view,           {0} },
     { MODKEY,               XK_q,               killclient,     {0} },
     { MODKEY|ShiftMask,     XK_q,               quit,           {0} },
+    { MODKEY|ControlMask,   XK_q,               spawn,          SHCMD("kill -SEGV ""\"$(xprop | grep PID| awk '{print $3}')""\"")},
     { MODKEY,               XK_w,               spawn,          SHCMD("$BROWSER") },
     { MODKEY|ShiftMask,     XK_w,               spawn,          SHCMD(TERMINAL " -e sudo nmtui") },
     { MODKEY,               XK_e,               spawn,          SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks") },
@@ -190,6 +191,7 @@ static Key keys[] = {
 
     { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
     { MODKEY,               XK_x,               incrgaps,       {.i = -3 } },
+    { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
     { MODKEY,               XK_b,               togglebar,      {0} },
     { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_n,               shiftview,      { .i = +1 } },  
