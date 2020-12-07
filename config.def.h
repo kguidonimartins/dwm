@@ -160,7 +160,7 @@ static Key keys[] = {
     { MODKEY,               XK_o,               incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,     XK_o,               incnmaster,     {.i = -1 } },
     { MODKEY,               XK_p,               shiftview,      { .i = -1 } },
-    { MODKEY|ShiftMask,     XK_p,               spawn,          SHCMD("mpc toggle ; mpcnotify") },
+    { MODKEY|ShiftMask,     XK_p,               spawn,          SHCMD("mpc toggle && mpcnotify") },
     { MODKEY,               XK_bracketleft,     spawn,          SHCMD("mpc seek -10") },
     { MODKEY|ShiftMask,     XK_bracketleft,     spawn,          SHCMD("mpc seek -60") },
     { MODKEY,               XK_bracketright,    spawn,          SHCMD("mpc seek +10") },
@@ -169,7 +169,7 @@ static Key keys[] = {
 
     { MODKEY,               XK_a,               togglegaps,     {0} },
     { MODKEY|ShiftMask,     XK_a,               defaultgaps,    {0} },
-    { MODKEY,                XK_s,               togglesticky,   {0} },
+    { MODKEY,               XK_s,               togglesticky,   {0} },
     { MODKEY,               XK_d,               spawn,          {.v = dmenucmd } },
     { MODKEY,               XK_f,               togglefullscr,  {0} },
     /* { MODKEY|ShiftMask,      XK_f,               setlayout,      {.v = &layouts[8]} }, */
@@ -224,7 +224,7 @@ static Key keys[] = {
     { MODKEY,               XK_F8,              spawn,          SHCMD("mailsync; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_F9,              spawn,          SHCMD("dmenumount") },
     { MODKEY,               XK_F10,             spawn,          SHCMD("dmenuumount") },
-    { MODKEY,               XK_F11,             spawn,          SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
+    { MODKEY,               XK_F11,             spawn,          SHCMD("camtoggle") },
     /* { MODKEY,                XK_F12,             xrdb,           {.v = NULL } }, */
     { 0,                    XK_F12,             togglescratch,  {.ui = 0} },
     { MODKEY,               XK_space,           zoom,           {0} },
