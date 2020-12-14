@@ -24,6 +24,8 @@ static const char *fonts[]          = {
                                         "Font Awesome 5:size=8:antialias=true:autohint=true"
                                       };
 static char dmenufont[]             = "UbuntuMono Nerd Font:size=8:antialias=true:autohint=8";
+
+/* DEFAULT COLORS */
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -34,6 +36,18 @@ static const char *colors[][3]      = {
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
     [SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
+
+/* /1* DRACULA COLORS *1/ */
+/* static const char col_gray1[]       = "#282a36"; */
+/* static const char col_gray2[]       = "#ffb86c"; */
+/* static const char col_gray3[]       = "#ff79c6"; */
+/* static const char col_gray4[]       = "#ffb86c"; */
+/* static const char col_cyan[]        = "#282a36"; */
+/* static const char *colors[][3]      = { */
+/*     /1*               fg         bg         border   *1/ */
+/*     [SchemeNorm] = { col_gray3, col_gray1, col_cyan }, */
+/*     [SchemeSel]  = { col_gray4, col_cyan,  col_gray2  }, */
+/* }; */
 
 typedef struct {
     const char *name;
