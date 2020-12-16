@@ -25,12 +25,24 @@ static const char *fonts[]          = {
                                       };
 static char dmenufont[]             = "UbuntuMono Nerd Font:size=8:antialias=true:autohint=8";
 
-/* DEFAULT COLORS */
+/* /1* DEFAULT COLORS *1/ */
+/* static const char col_gray1[]       = "#222222"; */
+/* static const char col_gray2[]       = "#444444"; */
+/* static const char col_gray3[]       = "#bbbbbb"; */
+/* static const char col_gray4[]       = "#eeeeee"; */
+/* static const char col_cyan[]        = "#44475A"; */
+/* static const char *colors[][3]      = { */
+/*     /1*               fg         bg         border   *1/ */
+/*     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
+/*     [SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, */
+/* }; */
+
+/* COBALT COLORS */
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#44475A";
+static const char col_cyan[]        = "#132738";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
