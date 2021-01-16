@@ -92,17 +92,18 @@ static const Rule rules[] = {
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
     /* 9 == 1 << 0 */
-	/* class       instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "Nautilus",  NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
-	{ "R_x11",     NULL,         NULL,       NULL,         1,           0,         0,         -1 },
-	{ "Todoist",   NULL,         NULL,       NULL,         1,           0,         0,         -1 },
-	{ NULL,        "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-	{ NULL,        "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-	{ "Brave",     NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-	{ "RStudio",   NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
-	{ "Code",      NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
-	{ "Zotero",    NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
-	{ NULL,        "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
+	/* class         instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
+	{ "R_x11",       NULL,         NULL,       NULL,         1,           0,         0,         -1 },
+	{ "Todoist",     NULL,         NULL,       NULL,         1,           0,         0,         -1 },
+	{ NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+	{ NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+	{ "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+	{ "qutebrowser", NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+	{ "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
+	{ "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
+	{ "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+	{ NULL,          "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
 };
 
@@ -220,7 +221,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
     { MODKEY,               XK_b,               togglebar,      {0} },
     { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
-    { MODKEY,               XK_n,               shiftview,      { .i = +1 } },  
+    { MODKEY,               XK_n,               shiftview,      { .i = +1 } },
     { MODKEY|ShiftMask,     XK_n,               spawn,          SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
     { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e ncmpcpp --screen playlist; kill -44 $(pidof dwmblocks)") },
     { MODKEY|ShiftMask,     XK_m,               spawn,          SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)") },
