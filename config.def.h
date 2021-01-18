@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -94,8 +94,6 @@ static const Rule rules[] = {
     /* 9 == 1 << 0 */
 	/* class         instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
-	{ "R_x11",       NULL,         NULL,       NULL,         1,           0,         0,         -1 },
-	{ "Todoist",     NULL,         NULL,       NULL,         1,           0,         0,         -1 },
 	{ NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
@@ -189,7 +187,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_o,               incnmaster,     {.i = -1 } },
     { MODKEY,               XK_p,               shiftview,      { .i = -1 } },
     { MODKEY|ShiftMask,     XK_p,               spawn,          SHCMD("mpc toggle && mpcnotify") },
-    { MODKEY,               XK_bracketleft,     spawn,          SHCMD("mpc seek -10") },
+    /* { MODKEY,               XK_bracketleft,     spawn,          SHCMD("mpc seek -10") }, */
+    { MODKEY,               XK_bracketleft,     focusmaster,    {0} },
     { MODKEY|ShiftMask,     XK_bracketleft,     spawn,          SHCMD("mpc seek -60") },
     { MODKEY,               XK_bracketright,    spawn,          SHCMD("mpc seek +10") },
     { MODKEY|ShiftMask,     XK_bracketright,    spawn,          SHCMD("mpc seek +60") },
