@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -97,7 +97,6 @@ static const Rule rules[] = {
 	{ NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-	{ "qutebrowser", NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
 	{ "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
 	{ "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
 	{ "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
