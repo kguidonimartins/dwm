@@ -96,6 +96,7 @@ static const Rule rules[] = {
 	{ "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
 	{ NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
 	{ NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+	{ "R_x11",       NULL,         NULL,       NULL,         0,           0,         0,          0 },
 	{ "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
 	{ "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
 	{ "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
