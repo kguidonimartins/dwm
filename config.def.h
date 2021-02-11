@@ -173,8 +173,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_w,               spawn,          SHCMD(TERMINAL " -e sudo nmtui") },
     { MODKEY,               XK_e,               spawn,          SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks") },
     { MODKEY|ShiftMask,     XK_e,               spawn,          SHCMD("nautilus") },
-    { MODKEY,               XK_r,               spawn,          SHCMD(TERMINAL " -e lf") },
-    { MODKEY|ShiftMask,     XK_r,               spawn,          SHCMD(TERMINAL " -e htop") },
+    { MODKEY,               XK_r,               view,           {0} },
+    { MODKEY|ShiftMask,     XK_r,               spawn,          SHCMD(TERMINAL " -e lf") },
     { MODKEY,               XK_t,               setlayout,      {.v = &layouts[0]} }, /* tile */
     { MODKEY|ShiftMask,     XK_t,               setlayout,      {.v = &layouts[1]} }, /* floating */
     { MODKEY,               XK_y,               setlayout,      {.v = &layouts[2]} }, /* monocle */
