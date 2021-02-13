@@ -83,7 +83,7 @@ static const Rule rules[] = {
      *  WM_CLASS(STRING) = instance, class
      *  WM_NAME(STRING) = title
      */
-    /* 1 == 1 << 8 */
+    /* 1 == 1 << 0 */
     /* 2 == 1 << 1 */
     /* 3 == 1 << 2 */
     /* 4 == 1 << 3 */
@@ -91,7 +91,7 @@ static const Rule rules[] = {
     /* 6 == 1 << 5 */
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
-    /* 9 == 1 << 0 */
+    /* 9 == 1 << 8 */
 	/* class         instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
 	{ NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
@@ -101,6 +101,7 @@ static const Rule rules[] = {
 	{ "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
 	{ "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
 	{ "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+	{ "Emacs",       NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
 	{ NULL,          "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
 };
@@ -242,7 +243,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_Page_Down,       shifttag,       { .i = +1 } },
     { MODKEY,               XK_Insert,          spawn,          SHCMD("xdotool type $(cat ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
-    { MODKEY,               XK_F1,              spawn,          SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },
+    { MODKEY,               XK_F1,              spawn,          SHCMD("emacs") },
     { MODKEY,               XK_F2,              spawn,          SHCMD("tutorialvids") },
     { MODKEY,               XK_F3,              spawn,          SHCMD("displayselect") },
     { MODKEY,               XK_F4,              spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
