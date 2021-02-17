@@ -69,10 +69,10 @@ const char *spcmd1[] = {TERMINAL, "-n", "sptmux", "-g", "120x34", "-e", "scrax",
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 const char *spcmd3[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
 static Sp scratchpads[] = {
-	/* name          cmd  */
-	{"sptmux",      spcmd1},
-	{"spranger",    spcmd2},
-	{"spterm",      spcmd3},
+        /* name          cmd  */
+        {"sptmux",      spcmd1},
+        {"spranger",    spcmd2},
+        {"spterm",      spcmd3},
 };
 
 /* tagging */
@@ -92,17 +92,17 @@ static const Rule rules[] = {
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
     /* 9 == 1 << 8 */
-	/* class         instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
-	{ NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-	{ NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-	{ "R_x11",       NULL,         NULL,       NULL,         0,           0,         0,          0 },
-	{ "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-	{ "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
-	{ "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
-	{ "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
-	{ "Emacs",       NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
-	{ NULL,          "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
+        /* class         instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
+        { "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
+        { NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+        { NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+        { "R_x11",       NULL,         NULL,       NULL,         0,           0,         0,          0 },
+        { "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+        { "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
+        { "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
+        { "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+        { "Emacs",       NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
+        { NULL,          "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
 };
 
@@ -334,4 +334,3 @@ static Button buttons[] = {
     { ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
     { ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
