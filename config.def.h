@@ -187,7 +187,8 @@ static Key keys[] = {
     { MODKEY,               XK_o,               incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,     XK_o,               incnmaster,     {.i = -1 } },
     { MODKEY,               XK_p,               shiftview,      { .i = -1 } },
-    { MODKEY|ShiftMask,     XK_p,               spawn,          SHCMD("mpc toggle && mpcnotify") },
+    { MODKEY|ShiftMask,     XK_p,               spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause") },
+    /* { MODKEY|ShiftMask,     XK_p,               spawn,          SHCMD("mpc toggle && mpcnotify") }, */
     /* { MODKEY,               XK_bracketleft,     spawn,          SHCMD("mpc seek -10") }, */
     { MODKEY,               XK_bracketleft,     focusmaster,    {0} },
     { MODKEY|ShiftMask,     XK_bracketleft,     spawn,          SHCMD("mpc seek -60") },
@@ -225,11 +226,14 @@ static Key keys[] = {
     { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_n,               shiftview,      { .i = +1 } },
     { MODKEY|ShiftMask,     XK_n,               spawn,          SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
-    { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e ncmpcpp --screen playlist; kill -44 $(pidof dwmblocks)") },
+    { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e spo; kill -44 $(pidof dwmblocks)") },
+    /* { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e ncmpcpp --screen playlist; kill -44 $(pidof dwmblocks)") }, */
     { MODKEY|ShiftMask,     XK_m,               spawn,          SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)") },
-    { MODKEY,               XK_comma,           spawn,          SHCMD("mpc prev") },
+    { MODKEY,               XK_comma,           spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous") },
+    /* { MODKEY,               XK_comma,           spawn,          SHCMD("mpc prev") }, */
     { MODKEY|ShiftMask,     XK_comma,           spawn,          SHCMD("mpc seek 0%") },
-    { MODKEY,               XK_period,          spawn,          SHCMD("mpc next") },
+    { MODKEY,               XK_period,          spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next") },
+    /* { MODKEY,               XK_period,          spawn,          SHCMD("mpc next") }, */
     { MODKEY|ShiftMask,     XK_period,          spawn,          SHCMD("mpc repeat") },
 
     { MODKEY,               XK_Left,            focusmon,       {.i = -1 } },
@@ -269,11 +273,11 @@ static Key keys[] = {
     { 0, XF86XK_AudioMute,                      spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioRaiseVolume,               spawn,          SHCMD("pamixer --allow-boost -i 3; kill -44 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioLowerVolume,               spawn,          SHCMD("pamixer --allow-boost -d 3; kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioPrev,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous") },
-    { 0, XF86XK_AudioNext,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next") },
+    { 0, XF86XK_AudioPrev,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous") },
+    { 0, XF86XK_AudioNext,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next") },
     { 0, XF86XK_AudioPause,                     spawn,          SHCMD("mpc pause") },
-    { 0, XF86XK_AudioPlay,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause") },
-    { 0, XF86XK_AudioStop,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop") },
+    { 0, XF86XK_AudioPlay,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause") },
+    { 0, XF86XK_AudioStop,                      spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop") },
     { 0, XF86XK_AudioRewind,                    spawn,          SHCMD("mpc seek -10") },
     { 0, XF86XK_AudioForward,                   spawn,          SHCMD("mpc seek +10") },
     { 0, XF86XK_AudioMedia,                     spawn,          SHCMD(TERMINAL " -e ncmpcpp") },
