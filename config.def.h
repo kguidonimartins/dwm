@@ -173,8 +173,8 @@ static Key keys[] = {
     { MODKEY|ControlMask,   XK_q,               spawn,          SHCMD("kill -SEGV ""\"$(xprop | grep PID| awk '{print $3}')""\"")},
     { MODKEY,               XK_w,               spawn,          SHCMD("$BROWSER") },
     { MODKEY|ShiftMask,     XK_w,               spawn,          SHCMD(TERMINAL " -e sudo nmtui") },
-    { MODKEY,               XK_e,               spawn,          SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks") },
-    { MODKEY|ShiftMask,     XK_e,               spawn,          SHCMD("nautilus") },
+    { MODKEY,               XK_e,               spawn,          SHCMD("nautilus") },
+    { MODKEY|ShiftMask,     XK_e,               spawn,          SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks") },
     { MODKEY,               XK_r,               view,           {0} },
     { MODKEY|ShiftMask,     XK_r,               spawn,          SHCMD(TERMINAL " -e lf") },
     { MODKEY,               XK_t,               setlayout,      {.v = &layouts[0]} }, /* tile */
