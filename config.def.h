@@ -102,6 +102,7 @@ static const Rule rules[] = {
         { "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
         { "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
         { "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+        { "Spotify",     NULL,         NULL,       1 << 7,       0,           0,         0,         -1 },
         { "Emacs",       NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
         { NULL,          "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
@@ -248,18 +249,14 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_Page_Down,       shifttag,       { .i = +1 } },
     { MODKEY,               XK_Insert,          spawn,          SHCMD("xdotool type $(cat ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
-    { MODKEY,               XK_F1,              spawn,          SHCMD("emacs") },
-    { MODKEY,               XK_F2,              spawn,          SHCMD("tutorialvids") },
-    { MODKEY,               XK_F3,              spawn,          SHCMD("displayselect") },
-    { MODKEY,               XK_F4,              spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
-    /* { MODKEY,                XK_F5,              xrdb,           {.v = NULL } }, */
+    { MODKEY,               XK_F1,              spawn,          SHCMD("mailsync; kill -44 $(pidof dwmblocks)") },
+    { MODKEY,               XK_F2,              spawn,          SHCMD("displayselect") },
+    { MODKEY,               XK_F3,              spawn,          SHCMD("dmenumount") },
+    { MODKEY,               XK_F4,              spawn,          SHCMD("dmenuumount") },
     { MODKEY,               XK_F6,              togglesystray,  {0} },
-    { MODKEY,               XK_F7,              spawn,          SHCMD("td-toggle") },
-    { MODKEY,               XK_F8,              spawn,          SHCMD("mailsync; kill -44 $(pidof dwmblocks)") },
-    { MODKEY,               XK_F9,              spawn,          SHCMD("dmenumount") },
-    { MODKEY,               XK_F10,             spawn,          SHCMD("dmenuumount") },
+    { MODKEY,               XK_F8,              spawn,          SHCMD("spotify") },
+    { MODKEY,               XK_F9,              spawn,          SHCMD("emacs") },
     { MODKEY,               XK_F11,             spawn,          SHCMD("camtoggle") },
-    /* { MODKEY,                XK_F12,             xrdb,           {.v = NULL } }, */
     { 0,                    XK_F12,             togglescratch,  {.ui = 0} },
     { MODKEY,               XK_space,           zoom,           {0} },
     { MODKEY|ShiftMask,     XK_space,           togglefloating, {0} },
