@@ -100,7 +100,7 @@ static const Rule rules[] = {
         { "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
         { "firefox",     NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
         { "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
-        { "libreoffice-writer",     NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
+        { "Soffice",     NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
         { "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
         { "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
         { "Spotify",     NULL,         NULL,       1 << 7,       0,           0,         0,         -1 },
