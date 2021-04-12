@@ -99,6 +99,7 @@ static const Rule rules[] = {
         { NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
         { "R_x11",       NULL,         NULL,       NULL,         0,           0,         0,          0 },
         { "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+        { "qutebrowser", NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
         { "firefox",     NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
         { "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
         { "Soffice",     NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
