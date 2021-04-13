@@ -232,7 +232,7 @@ static Key keys[] = {
     { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_n,               shiftview,      { .i = +1 } },
     { MODKEY|ShiftMask,     XK_n,               spawn,          SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
-    { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e spo; kill -44 $(pidof dwmblocks)") },
+    { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e run_ncspot; kill -44 $(pidof dwmblocks)") },
     /* { MODKEY,               XK_m,               spawn,          SHCMD(TERMINAL " -e ncmpcpp --screen playlist; kill -44 $(pidof dwmblocks)") }, */
     { MODKEY|ShiftMask,     XK_m,               spawn,          SHCMD("pulsemixer --toggle-mute; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_comma,           spawn,          SHCMD("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.ncspot /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous") },
