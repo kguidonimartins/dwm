@@ -226,7 +226,7 @@ static Key keys[] = {
     /* { MODKEY|ShiftMask,      XK_Return,          togglescratch,  {.ui = 0} }, */
 
     { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
-    { MODKEY,               XK_x,               incrgaps,       {.i = -3 } },
+    { MODKEY,               XK_x,               spawn,          SHCMD("slock") },
     { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
     { MODKEY,               XK_b,               togglebar,      {0} },
     { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
