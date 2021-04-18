@@ -117,19 +117,14 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int attachdirection = 2;    /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
 
-/* #include "layouts.c" */
-
-#define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
-#include "vanitygaps.c"
-
+#include "layouts.c"
 static const Layout layouts[] = {
     /* symbol     arrange function */
     { "[]=",      tile },    /* first entry is default */
     { "><>",      NULL },    /* no layout function means floating behavior */
     { "[M]",      monocle },
-    { "TTT",      bstack },
-    { "H[]",      deck },
-    { "===",      bstackhoriz }
+    { "HHH",      grid },
+    { "DD",       doubledeck },
 };
 
 /* key definitions */
@@ -190,9 +185,9 @@ static Key keys[] = {
     { MODKEY,               XK_t,               setlayout,      {.v = &layouts[0]} }, /* tile */
     { MODKEY|ShiftMask,     XK_t,               setlayout,      {.v = &layouts[1]} }, /* floating */
     { MODKEY,               XK_y,               setlayout,      {.v = &layouts[2]} }, /* monocle */
-    { MODKEY|ShiftMask,     XK_y,               setlayout,      {.v = &layouts[3]} }, /* bstack */
+    { MODKEY|ShiftMask,     XK_y,               setlayout,      {.v = &layouts[3]} }, /* dwindle */
     { MODKEY,               XK_u,               setlayout,      {.v = &layouts[4]} }, /* deck */
-    { MODKEY|ShiftMask,     XK_u,               setlayout,      {.v = &layouts[5]} }, /* bstackhoriz */
+    /* { MODKEY|ShiftMask,  XK_u,               setlayout,      {.v = &layouts[5]} }, /1* monocle *1/ */
     { MODKEY,               XK_i,               spawn,          SHCMD("dmenubookmarks") }, /* centeredmaster */
     /* { MODKEY|ShiftMask,  XK_i,               setlayout,      {.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
     { MODKEY,               XK_o,               incnmaster,     {.i = +1 } },
