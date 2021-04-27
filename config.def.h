@@ -243,6 +243,7 @@ static Key keys[] = {
     { MODKEY,               XK_x,               spawn,          SHCMD("slock") },
     { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
     { MODKEY,               XK_b,               togglebar,      {0} },
+    { MODKEY|ShiftMask,     XK_b,               spawn,          SHCMD("setbg") },
     { MODKEY,               XK_v,               spawn,          SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
     { MODKEY,               XK_n,               shiftview,      { .i = +1 } },
     { MODKEY|ShiftMask,     XK_n,               spawn,          SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
