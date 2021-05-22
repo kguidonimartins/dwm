@@ -213,7 +213,7 @@ static Key keys[] = {
     /* { MODKEY,               XK_bracketleft,     spawn,          SHCMD("mpc seek -10") }, */
     { MODKEY,               XK_bracketleft,     focusmaster,    {0} },
     { MODKEY|ShiftMask,     XK_bracketleft,     spawn,          SHCMD("mpc seek -60") },
-    { MODKEY,               XK_bracketright,    spawn,          SHCMD("mpc seek +10") },
+    { MODKEY,               XK_bracketright,    focusstack,     {.i = +1 } },
     { MODKEY|ShiftMask,     XK_bracketright,    spawn,          SHCMD("mpc seek +60") },
     { MODKEY,               XK_backslash,       view,           {0} },
 
