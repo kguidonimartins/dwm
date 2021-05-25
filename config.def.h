@@ -25,16 +25,23 @@ static const char *fonts[]          = {
                                       };
 static char dmenufont[]             = "UbuntuMono Nerd Font:size=8:antialias=true:autohint=8";
 
+static const char col_gray1[]     = "#132738";
+static const char col_gray2[]     = "#444444";
+static const char col_gray3[]     = "#bbbbbb";
+static const char col_gray4[]     = "#eeeeee";
+static const char col_gray5[]     = "#132738";
+static const char col_gray6[]     = "#343746";
+static const char col_cyan[]      = "#2A265A";
+static const char col_blue[]      = "#3B84DE";
+static const char col_black[]     = "#000000";
 
 static const char *colors[][3]      = {
-    /*                  fg         bg         border   */
-    [SchemeNorm]     = { col_gray3, col_gray1, col_gray5 },
-    [SchemeSel]      = { col_gray4, col_cyan,  col_blue  },
-    [SchemeStatus]   = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-    [SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm] = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm] = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+        /*                   fg         bg         border   */
+        [SchemeTagsSel]  = { col_gray4, col_cyan,  col_black  }, // Tagbar left selected {text,background,not used but cannot be empty}
+        [SchemeTagsNorm] = { col_gray3, col_gray1, col_black  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+        [SchemeStatus]   = { col_gray3, col_gray1, col_black  }, // Statusbar right {text,background,not used but cannot be empty}
+        [SchemeInfoSel]  = { col_gray4, col_cyan,  col_black  }, // infobar middle  selected {text,background,not used but cannot be empty}
+        [SchemeInfoNorm] = { col_gray3, col_gray5, col_black  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
