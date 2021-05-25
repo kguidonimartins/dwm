@@ -37,6 +37,8 @@ static const char col_black[]     = "#000000";
 
 static const char *colors[][3]      = {
         /*                   fg         bg         border   */
+        [SchemeSel]      = { col_gray4, col_cyan,  col_blue   },
+        [SchemeNorm]     = { col_gray3, col_gray1, col_black  },
         [SchemeTagsSel]  = { col_gray4, col_cyan,  col_black  }, // Tagbar left selected {text,background,not used but cannot be empty}
         [SchemeTagsNorm] = { col_gray3, col_gray1, col_black  }, // Tagbar left unselected {text,background,not used but cannot be empty}
         [SchemeStatus]   = { col_gray3, col_gray1, col_black  }, // Statusbar right {text,background,not used but cannot be empty}
