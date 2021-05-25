@@ -25,26 +25,7 @@ static const char *fonts[]          = {
                                       };
 static char dmenufont[]             = "UbuntuMono Nerd Font:size=8:antialias=true:autohint=8";
 
-/* /1* DEFAULT COLORS *1/ */
-/* static const char col_gray1[]       = "#222222"; */
-/* static const char col_gray2[]       = "#444444"; */
-/* static const char col_gray3[]       = "#bbbbbb"; */
-/* static const char col_gray4[]       = "#eeeeee"; */
-/* static const char col_cyan[]        = "#44475A"; */
-/* static const char *colors[][3]      = { */
-/*     /1*               fg         bg         border   *1/ */
-/*     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
-/*     [SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, */
-/* }; */
 
-/* COBALT COLORS */
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_gray5[]       = "#132738";
-static const char col_cyan[]        = "#2A265A";
-static const char col_blue[]        = "#3B84DE";
 static const char *colors[][3]      = {
     /*                  fg         bg         border   */
     [SchemeNorm]     = { col_gray3, col_gray1, col_gray5 },
@@ -58,18 +39,6 @@ static const char *colors[][3]      = {
 
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
-
-/* /1* DRACULA COLORS *1/ */
-/* static const char col_gray1[]       = "#282a36"; */
-/* static const char col_gray2[]       = "#ffb86c"; */
-/* static const char col_gray3[]       = "#ff79c6"; */
-/* static const char col_gray4[]       = "#ffb86c"; */
-/* static const char col_cyan[]        = "#282a36"; */
-/* static const char *colors[][3]      = { */
-/*     /1*               fg         bg         border   *1/ */
-/*     [SchemeNorm] = { col_gray3, col_gray1, col_cyan }, */
-/*     [SchemeSel]  = { col_gray4, col_cyan,  col_gray2  }, */
-/* }; */
 
 typedef struct {
     const char *name;
