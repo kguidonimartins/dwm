@@ -81,21 +81,22 @@ static const Rule rules[] = {
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
     /* 9 == 1 << 8 */
-        /* class         instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
-        { "Nautilus",    NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
-        { NULL,          "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-        { NULL,          "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-        { "R_x11",       NULL,         NULL,       NULL,         0,           0,         0,          0 },
-        { "Brave",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-        { "qutebrowser", NULL,         NULL,       1 << 3,       0,           0,         0,          0 },
-        { "firefox",     NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-        { "RStudio",     NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
-        { "Soffice",     NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
-        { "Code",        NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
-        { "Zotero",      NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
-        { "Spotify",     NULL,         NULL,       1 << 7,       0,           0,         0,         -1 },
-        { "Emacs",       NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
-        { NULL,          "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
+        /* class          instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
+        { "Nautilus",     NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
+        { NULL,           "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+        { NULL,           "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+        { "R_x11",        NULL,         NULL,       NULL,         0,           0,         0,          0 },
+        { "Brave",        NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+        { "qutebrowser",  NULL,         NULL,       1 << 3,       0,           0,         0,          0 },
+        { "firefox",      NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+        { "RStudio",      NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
+        { "Soffice",      NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
+        { "Code",         NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
+        { "CherryTomato", NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
+        { "Zotero",       NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+        { "Spotify",      NULL,         NULL,       1 << 7,       0,           0,         0,          0 },
+        { "Emacs",        NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
+        { NULL,           "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
 };
 
@@ -145,7 +146,7 @@ static char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
 
 static Key keys[] = {
     /* modifier             key                 function        argument */
-    { MODKEY,               XK_grave,           spawn,          SHCMD("dmenuunicode") },
+    /* { MODKEY,               XK_grave,           spawn,          SHCMD("dmenuunicode") }, */
     TAGKEYS(                XK_1,               0)
     TAGKEYS(                XK_2,               1)
     TAGKEYS(                XK_3,               2)
