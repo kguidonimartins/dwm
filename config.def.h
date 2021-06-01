@@ -92,6 +92,7 @@ static const Rule rules[] = {
         { "RStudio",      NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
         { "Soffice",      NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
         { "Code",         NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
+        { "Zathura",      NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
         { "CherryTomato", NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
         { "Zotero",       NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
         { "Spotify",      NULL,         NULL,       1 << 7,       0,           0,         0,          0 },
