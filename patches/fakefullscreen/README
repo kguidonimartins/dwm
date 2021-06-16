@@ -1,0 +1,36 @@
+# From: https://github.com/bakkeby/patches/wiki/fullscreen-compilation
+
+fullscreen compilation
+
+Compilation of fullscreen patches for dwm.
+
+This aims to provide a comprehensive fullscreen solution with the following features:
+
+    toggle fullscreen for any window using a single keybinding rather than having to rely on per-application keybindings
+    the ability to have windows go fullscreen within the size and position the window is currently in (a.k.a. fake fullscreen)
+    allow a fullscreen window to be moved to an adjacent monitor while remaining fullscreen
+    make fullscreen windows lose fullscreen if another (e.g. new) window on the same monitor receives focus, while still allowing dialog boxes to show while in fullscreen
+    allow seamless transition between the two fullscreen modes
+
+The default keybindings are:
+
+    MOD+f to make a window fullscreen
+    MOD+Shift+f to make a window fake fullscreen
+
+This incorporates, and expands on, the following patches:
+
+    fakefullscreenclient
+    togglefullscreen (a.k.a. actualfullscreen)
+    tagmonfixfs
+    losefullscreen
+
+Download
+
+    dwm-fullscreen-compilation-6.2.diff
+
+Complementary patches
+
+    dwm-fullscreen-compilation-tagallmon-6.2.diff
+    dwm-fullscreen-compilation-tagswapmon-6.2.diff
+    dwm-fullscreen-compilation-noborder-6.2.diff
+    dwm-fullscreen-compilation-rule-6.2.diff
