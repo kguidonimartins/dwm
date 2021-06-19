@@ -96,6 +96,7 @@ static const Rule rules[] = {
         { "Zathura",      NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
         { "CherryTomato", NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
         { "Zotero",       NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+        { NULL,           NULL,         "Data: .",  1 << 6,       0,           0,         0,          0 },
         { "Spotify",      NULL,         NULL,       1 << 7,       0,           0,         0,          0 },
         { "Emacs",        NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
         { NULL,           "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
