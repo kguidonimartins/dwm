@@ -257,7 +257,7 @@ static Key keys[] = {
     { MODKEY,               XK_F4,              spawn,          SHCMD("dmenuumount") },
     { MODKEY,               XK_F6,              togglesystray,  {0} },
     { MODKEY,               XK_F8,              spawn,          SHCMD("spotify") },
-    { 0,                    XK_F8,              spawn,          SHCMD("if [ $(tmux list-sessions | wc -l) != 0 ]; then st -e tm; fi; kill -44 $(pidof dwmblocks)") },
+    /* { 0,                    XK_F8,              spawn,          SHCMD("if [ $(tmux list-sessions | wc -l) != 0 ]; then st -e tm; fi; kill -44 $(pidof dwmblocks)") }, */
     { MODKEY,               XK_F9,              spawn,          SHCMD("emacs") },
     { MODKEY,               XK_F11,             spawn,          SHCMD("camtoggle") },
     { 0,                    XK_F12,             togglescratch,  {.ui = 0} },
