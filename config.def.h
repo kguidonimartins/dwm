@@ -94,6 +94,7 @@ static const Rule rules[] = {
         { "Code",         NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
         { "Gimp",         NULL,         NULL,       1 << 5,       0,           0,         0,          0 },
         { "Zathura",      NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
+        { "okular",      NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
         { "CherryTomato", NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
         { "Zotero",       NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
         { NULL,           NULL,         "Data: .",  1 << 6,       0,           0,         0,          0 },
