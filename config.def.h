@@ -187,7 +187,7 @@ static Key keys[] = {
     { MODKEY,               XK_u,               setlayout,      {.v = &layouts[4]} }, /* deck */
     { MODKEY|ShiftMask,     XK_u,               setlayout,      {.v = &layouts[5]} }, /* bstackhoriz */
     { MODKEY,               XK_i,               spawn,          SHCMD("dmenubookmarks") }, /* centeredmaster */
-    /* { MODKEY|ShiftMask,  XK_i,               setlayout,      {.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
+    { MODKEY|ShiftMask,     XK_i,               spawn,          SHCMD("emacs-everywhere") }, /* centeredfloatingmaster */
     { MODKEY,               XK_o,               incnmaster,     {.i = +1 } },
     { MODKEY|ShiftMask,     XK_o,               incnmaster,     {.i = -1 } },
     { MODKEY,               XK_p,               shiftview,      { .i = -1 } },
@@ -259,7 +259,7 @@ static Key keys[] = {
     { MODKEY,               XK_F6,              togglesystray,  {0} },
     { MODKEY,               XK_F8,              spawn,          SHCMD("spotify") },
     /* { 0,                    XK_F8,              spawn,          SHCMD("if [ $(tmux list-sessions | wc -l) != 0 ]; then st -e tm; fi; kill -44 $(pidof dwmblocks)") }, */
-    { MODKEY,               XK_F9,              spawn,          SHCMD("emacs") },
+    { MODKEY,               XK_F9,              spawn,          SHCMD("run_emacs") },
     { MODKEY,               XK_F11,             spawn,          SHCMD("camtoggle") },
     { 0,                    XK_F12,             togglescratch,  {.ui = 0} },
     { MODKEY,               XK_space,           zoom,           {0} },
