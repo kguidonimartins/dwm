@@ -81,26 +81,37 @@ static const Rule rules[] = {
     /* 7 == 1 << 6 */
     /* 8 == 1 << 7 */
     /* 9 == 1 << 8 */
-        /* class          instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
-        { "Nautilus",     NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
-        { NULL,           "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-        { NULL,           "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
-        { "R_x11",        NULL,         NULL,       NULL,         0,           0,         0,          0 },
-        { "Brave",        NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-        { "qutebrowser",  NULL,         NULL,       1 << 3,       0,           0,         0,          0 },
-        { "firefox",      NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
-        { "RStudio",      NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
-        { "Soffice",      NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
-        { "Code",         NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
-        { "Gimp",         NULL,         NULL,       1 << 5,       0,           0,         0,          0 },
-        { "Zathura",      NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
-        { "okular",      NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
-        { "CherryTomato", NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
-        { "Zotero",       NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
-        { NULL,           NULL,         "Data: .",  1 << 6,       0,           0,         0,          0 },
-        { "Spotify",      NULL,         NULL,       1 << 7,       0,           0,         0,          0 },
-        { "Emacs",        NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
-        { NULL,           "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
+        /* class           instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
+        /* just send to any tag in monitor 0 */
+        { "R_x11",         NULL,         NULL,       NULL,         0,           0,         0,          0 },
+        /* tag 2 */
+        { "Nautilus",      NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
+        /* tag 3 */
+        { "Brave",         NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+        { "firefox",       NULL,         NULL,       1 << 2,       0,           0,         0,         -1 },
+        /* tag 4 */
+        { "qutebrowser",   NULL,         NULL,       1 << 3,       0,           0,         0,          0 },
+        { "RStudio",       NULL,         NULL,       1 << 3,       0,           0,         0,         -1 },
+        /* tag 5 */
+        { "Soffice",       NULL,         NULL,       1 << 4,       0,           0,         0,         -1 },
+        /* tag 6 */
+        { "Code",          NULL,         NULL,       1 << 5,       0,           0,         0,         -1 },
+        { "Gimp",          NULL,         NULL,       1 << 5,       0,           0,         0,          0 },
+        { "Zathura",       NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
+        { "okular",        NULL,         NULL,       1 << 5,       0,           0,         0,          1 },
+        { "CherryTomato",  NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
+        /* tag 7 */
+        { "Zotero",        NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+        { NULL,            NULL,         "Data: .",  1 << 6,       0,           0,         0,          0 },
+        /* tag 8 */
+        { "Google-chrome", NULL,         NULL,       1 << 7,       0,           0,         0,         -1 },
+        { "zoom",          NULL,         NULL,       1 << 7,       0,           0,         0,         -1 },
+        /* tag 9 */
+        { "Emacs",         NULL,         NULL,       1 << 8,       0,           0,         0,         -1 },
+        /* fly baby */
+        { NULL,            "sptmux",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+        { NULL,            "spterm",     NULL,       SPTAG(0),     1,           1,         0,          1 },
+        { NULL,            "spcalc",     NULL,       SPTAG(1),     1,           1,         0,         -1 },
 
 };
 
