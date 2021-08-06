@@ -159,6 +159,10 @@ static char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
 #include <X11/XF86keysym.h>
 #include "shiftview.c"
 
+/* NOTE 06-08-2021: focusonnetactive patch and xdo */
+/* https://www.reddit.com/r/suckless/comments/ox329q/how_can_i_make_dwm_automatically_switch_to_the/ */
+/* xdo activate -N Gimp || gimp */
+
 static Key keys[] = {
     /* modifier             key                 function        argument */
     /* { MODKEY,               XK_grave,           spawn,          SHCMD("dmenuunicode") }, */
@@ -184,10 +188,10 @@ static Key keys[] = {
     { MODKEY,               XK_q,               killclient,     {0} },
     { MODKEY|ShiftMask,     XK_q,               quit,           {0} },
     { MODKEY|ControlMask,   XK_q,               spawn,          SHCMD("kill -SEGV ""\"$(xprop | grep PID| awk '{print $3}')""\"")},
-    { MODKEY,               XK_w,               spawn,          SHCMD("ifrun $BROWSER") },
+    { MODKEY,               XK_w,               spawn,          SHCMD("xdo activate -N $BROWSER || ifrun $BROWSER") },
     { MODKEY|ShiftMask,     XK_w,               spawn,          SHCMD(TERMINAL " -e sudo nmtui") },
-    { MODKEY,               XK_e,               spawn,          SHCMD("ifrun nautilus") },
-    { MODKEY|ShiftMask,     XK_e,               spawn,          SHCMD("ifrun emacs") },
+    { MODKEY,               XK_e,               spawn,          SHCMD("xdo activate -N Emacs || ifrun emacs") },
+    { MODKEY|ShiftMask,     XK_e,               spawn,          SHCMD("xdo activate -N Org.gnome.Nautilus || ifrun nautilus") },
     // { MODKEY|ShiftMask,     XK_e,               spawn,          SHCMD(TERMINAL " -e neomutt ; pkill -RTMIN+12 dwmblocks") },
     { MODKEY,               XK_r,               goback,           {0} },
     { MODKEY|ShiftMask,     XK_r,               spawn,          SHCMD(TERMINAL " -e lf") },
@@ -236,6 +240,7 @@ static Key keys[] = {
 
     { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
     { MODKEY,               XK_x,               spawn,          SHCMD("slock") },
+    { MODKEY,               XK_c,               spawn,          SHCMD("xdo activate -N Org.gnome.Nautilus || ifrun nautilus") },
     { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
     { MODKEY,               XK_b,               togglebar,      {0} },
     { MODKEY|ShiftMask,     XK_b,               spawn,          SHCMD("setbg") },
