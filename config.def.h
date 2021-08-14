@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -28,34 +28,35 @@ static char dmenufont[]             = "UbuntuMono Nerd Font:size=8:antialias=tru
 static const char col_gray1[]     = "#132738";
 static const char col_gray2[]     = "#444444";
 static const char col_gray3[]     = "#bbbbbb";
-static const char col_gray4[]     = "#eeeeee";
+static const char col_gray4[]     = "#FFFFFF";
 static const char col_gray5[]     = "#132738";
 static const char col_gray6[]     = "#343746";
 static const char col_cyan[]      = "#2A265A";
 static const char col_blue[]      = "#3B84DE";
 static const char col_black[]     = "#000000";
-
-/* static const char *colors[][3]      = { */
-/*         /\*                   fg         bg         border   *\/ */
-/*         [SchemeSel]      = { col_gray4, col_cyan,  col_blue   }, */
-/*         [SchemeNorm]     = { col_gray3, col_gray1, col_black  }, */
-/*         [SchemeTagsSel]  = { col_gray4, col_cyan,  col_black  }, // Tagbar left selected {text,background,not used but cannot be empty} */
-/*         [SchemeTagsNorm] = { col_gray3, col_gray1, col_black  }, // Tagbar left unselected {text,background,not used but cannot be empty} */
-/*         [SchemeStatus]   = { col_gray3, col_gray1, col_black  }, // Statusbar right {text,background,not used but cannot be empty} */
-/*         [SchemeInfoSel]  = { col_gray4, col_cyan,  col_black  }, // infobar middle  selected {text,background,not used but cannot be empty} */
-/*         [SchemeInfoNorm] = { col_gray3, col_gray5, col_black  }, // infobar middle  unselected {text,background,not used but cannot be empty} */
-/* }; */
+static const char col_white[]     = "#FFFFFF";
 
 static const char *colors[][3]      = {
-  /*                   fg         bg         border   */
-  [SchemeSel]      = { col_gray4, col_gray1, col_blue   }, // border of the selected window
-  [SchemeNorm]     = { col_gray4, col_gray1, col_black  }, // border of the unselected window
-  [SchemeTagsSel]  = { col_gray4, col_gray1, col_black  }, // Tagbar left selected {text,background,not used but cannot be empty}
-  [SchemeTagsNorm] = { col_gray4, col_gray1, col_black  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-  [SchemeStatus]   = { col_gray4, col_gray1, col_black  }, // Statusbar right {text,background,not used but cannot be empty}
-  [SchemeInfoSel]  = { col_gray4, col_gray1, col_black  }, // infobar middle  selected {text,background,not used but cannot be empty}
-  [SchemeInfoNorm] = { col_gray4, col_gray1, col_black  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+        /*                   fg         bg         border   */
+        [SchemeSel]      = { col_gray4, col_cyan,  col_blue   }, // border of the selected window
+        [SchemeNorm]     = { col_gray4, col_gray1, col_black  }, // border of the unselected window
+        [SchemeTagsSel]  = { col_gray4, col_cyan,  col_black  }, // tagbar left selected {text, background, not used but cannot be empty}
+        [SchemeTagsNorm] = { col_gray4, col_gray1, col_black  }, // tagbar left unselected {text, background, not used but cannot be empty}
+        [SchemeStatus]   = { col_gray4, col_gray1, col_black  }, // statusbar right {text, background, not used but cannot be empty}
+        [SchemeInfoSel]  = { col_gray4, col_cyan,  col_black  }, // infobar middle selected {text, background, not used but cannot be empty}
+        [SchemeInfoNorm] = { col_gray4, col_gray5, col_black  }, // infobar middle unselected {text, background, not used but cannot be empty}
 };
+
+/* static const char *colors[][3]      = { */
+/*   /\*                   fg         bg         border   *\/ */
+/*   [SchemeSel]      = { col_gray4, col_gray1, col_white   }, // border of the selected window */
+/*   [SchemeNorm]     = { col_gray4, col_gray1, col_gray1  }, // border of the unselected window */
+/*   [SchemeTagsSel]  = { col_gray4, col_gray1, col_black  }, // Tagbar left selected {text,background,not used but cannot be empty} */
+/*   [SchemeTagsNorm] = { col_gray4, col_gray1, col_black  }, // Tagbar left unselected {text,background,not used but cannot be empty} */
+/*   [SchemeStatus]   = { col_gray4, col_gray1, col_black  }, // Statusbar right {text,background,not used but cannot be empty} */
+/*   [SchemeInfoSel]  = { col_gray4, col_gray1, col_black  }, // infobar middle  selected {text,background,not used but cannot be empty} */
+/*   [SchemeInfoNorm] = { col_gray4, col_gray1, col_black  }, // infobar middle  unselected {text,background,not used but cannot be empty} */
+/* }; */
 
 static const XPoint stickyicon[]    = { {0,0}, {4,0}, {4,8}, {2,6}, {0,8}, {0,0} }; /* represents the icon as an array of vertices */
 static const XPoint stickyiconbb    = {4,8};	/* defines the bottom right corner of the polygon's bounding box (speeds up scaling) */
