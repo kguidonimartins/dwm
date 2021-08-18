@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -56,8 +56,8 @@ static const char col_white[]     = "#FFFFFF";
 
 static const char *colors[][3]      = {
   /*                   fg         bg         border   */
-  [SchemeSel]      = { col_gray4, col_gray1, col_gray1   }, // border of the selected window
-  [SchemeNorm]     = { col_gray4, col_gray1, col_gray1  }, // border of the unselected window
+  [SchemeSel]      = { col_gray4, col_gray1, col_blue   }, // border of the selected window
+  [SchemeNorm]     = { col_gray4, col_gray1, col_black  }, // border of the unselected window
   [SchemeTagsSel]  = { col_gray4, col_gray1, col_black  }, // Tagbar left selected {text,background,not used but cannot be empty}
   [SchemeTagsNorm] = { col_gray4, col_gray1, col_black  }, // Tagbar left unselected {text,background,not used but cannot be empty}
   [SchemeStatus]   = { col_gray4, col_gray1, col_black  }, // Statusbar right {text,background,not used but cannot be empty}
