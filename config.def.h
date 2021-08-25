@@ -258,7 +258,7 @@ static Key keys[] = {
     /* { MODKEY|ShiftMask,      XK_Return,          togglescratch,  {.ui = 0} }, */
 
     { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
-    { MODKEY,               XK_x,               spawn,          SHCMD("slock") },
+    { MODKEY,               XK_x,               spawn,          SHCMD("betterlockscreen --lock") },
     { MODKEY,               XK_c,               spawn,          SHCMD("xdo activate -N Org.gnome.Nautilus || ifrun nautilus") },
     { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
     { MODKEY,               XK_b,               togglebar,      {0} },
