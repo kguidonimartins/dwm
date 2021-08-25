@@ -5,7 +5,7 @@
 #define TERMCLASS "St"
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
@@ -121,6 +121,7 @@ static const Rule rules[] = {
         { "CherryTomato",  NULL,         NULL,       1 << 5,       1,           0,         0,          0 },
         /* tag 7 */
         { "Zotero",        NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
+        { "mpv",           NULL,         NULL,       1 << 6,       0,           0,         0,         -1 },
         { NULL,            NULL,         "Data: .",  1 << 6,       0,           0,         0,          0 },
         /* tag 8 */
         { "Google-chrome", NULL,         NULL,       1 << 7,       0,           0,         0,         -1 },
@@ -257,7 +258,8 @@ static Key keys[] = {
     { MODKEY,               XK_Return,          spawn,          {.v = termcmd } },
     /* { MODKEY|ShiftMask,      XK_Return,          togglescratch,  {.ui = 0} }, */
 
-    { MODKEY,               XK_z,               incrgaps,       {.i = +3 } },
+    { MODKEY,               XK_z,               spawn,          SHCMD("zap") },
+    { MODKEY|ShiftMask,     XK_z,               incrgaps,       {.i = +3 } },
     { MODKEY,               XK_x,               spawn,          SHCMD("betterlockscreen --lock") },
     { MODKEY,               XK_c,               spawn,          SHCMD("xdo activate -N Org.gnome.Nautilus || ifrun nautilus") },
     { MODKEY|ShiftMask,     XK_c,               spawn,          SHCMD("camtoggle") },
