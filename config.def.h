@@ -103,6 +103,7 @@ static const Rule rules[] = {
         /* class           instance      title       tags mask    isfloating   isterminal  noswallow  monitor */
         /* just send to any tag in monitor 0 */
         { "R_x11",         NULL,         NULL,       NULL,         0,           0,         0,          0 },
+        { "Insync",        NULL,         NULL,       NULL,         1,           0,         0,         -1 },
         /* tag 2 */
         { "Nautilus",      NULL,         NULL,       1 << 1,       0,           0,         0,         -1 },
         /* tag 3 */
